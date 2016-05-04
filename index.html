@@ -41,10 +41,10 @@
                 <h1 class="name">Houssam KARRACH</h1>
                 <h2 class="desc">Ingénieur d'étude et développement</h2>   
                 <ul class="social list-inline">
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>                   
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github-alt"></i></a></li>                  
+                    <li><a href="https://twitter.com/housskarrach"><i class="fa fa-twitter"></i></a></li>                   
+                    <li><a href="https://plus.google.com/u/0/110940672798857268724/posts"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/houssam-karrach-66875178?trk=hp-identity-photo"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Houssk"><i class="fa fa-github-alt"></i></a></li>                  
                     <li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>                 
                 </ul> 
             </div><!--//profile-->
@@ -190,7 +190,10 @@
                         <h2 class="heading">My GitHub</h2>
                         <p>You can embed your GitHub activities using Casey Scarborough's <a href="http://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.        
                         <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
+                        <div id="feed" class="feed">
+                        <script type="text/javascript">
+                            GitHubActivity.feed({ username: "houssk", selector: "#feed" });
+                        </script>
                         </div><!--//ghfeed-->
                         
                     </div><!--//secton-inner-->
