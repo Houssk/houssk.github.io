@@ -18,12 +18,16 @@
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <!-- github acitivity css -->
-    <link rel="stylesheet" href="assets/plugins/github-activity/dist/github-activity-0.1.1.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/dist/octicons/octicons.min.css">
-    
+    <link rel="stylesheet" href="css/github-activity.css">
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+
+      <script type="text/javascript" src="assets/plugins/github-activity/dist/mustache/mustache.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/github-activity/dist/github-activity-0.1.1.min.js"></script>
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,7 +40,7 @@
     <!-- ******HEADER****** --> 
     <header class="header">
         <div class="container">                       
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="James Lee" />
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="Karrach houssam" />
             <div class="profile-content pull-left">
                 <h1 class="name">Houssam KARRACH</h1>
                 <h2 class="desc">Ingénieur d'étude et développement</h2>   
@@ -191,8 +195,12 @@
                         <p>You can embed your GitHub activities using Casey Scarborough's <a href="http://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.        
                         <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->                       
                         <div id="feed" class="feed">
-                        <script type="text/javascript">
-                            GitHubActivity.feed({ username: "houssk", selector: "#feed" });
+                        <script >
+                              GitHubActivity.feed({
+                                    username: "houssk",                            
+                                    selector: "#feed",
+                                    limit: 20 // optional
+                                });
                         </script>
                         </div><!--//ghfeed-->
                         
@@ -391,8 +399,7 @@
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
     <!-- github activity plugin -->
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/mustache/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/dist/github-activity-0.1.1.min.js"></script>
+  
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>            
 </body>
