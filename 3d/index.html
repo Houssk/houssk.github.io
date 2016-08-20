@@ -1,149 +1,22 @@
 <!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title> Planification tibiale</title>
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="build/three.js"></script>
+    <script type="text/javascript" src ="examples/js/libs/dat.gui.min.js"></script>
+
+    <script type="text/javascript" src="build/ThreeCSG.js"></script>
+    <script  src = "examples/js/loaders/OBJLoader.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <style type="text/css">
+        body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
-
-<body id = "body">
-
-<div class = "container">
-<div id = "row" class="row">
-  <div class="col-lg-12 ">
-    <div  id= "thumbnail" class="thumbnail">
-      <div id= "scene_globale">    	
-       </div> 
-      <div class="caption">
-        <h3>Planification tibiale</h3>
-      
-           <p><button id="save" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-save" aria-hidden="true"></span>
-			</button>       	
-			<button id="resize_full" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
-			</button>
-			<button id="resize_moins" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span>
-			</button></p>
-
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-4">
-    <div  class="thumbnail">
-      <div id= "coupe_sagittale">    	
-       </div> 
-      <div class="caption">
-        <h3>Coupe sagittale</h3>
-        <p><button id="plus_coupeSagittale" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-        	   <span id="valeur_coupeSagittale" class="badge">0</span>
-			<button id="moins_coupeSagittale" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-			</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="thumbnail">
-      <div id= "coupe_tibiale">    	
-       </div> 
-      <div class="caption">
-        <h3>Coupe tibiale</h3>
-        <p><button id="plus_coupeTibiale" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-        	       <span id="valeur_coupeTibiale" class="badge">0</span>
-			<button id="moins_coupeTibiale"type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-			</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="thumbnail">
-      <div id= "varus">    	
-       </div> 
-      <div class="caption">
-        <h3>Varus</h3>
-        <p><button id="plus_varus"type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-        	  <span id="valeur_varus" class="badge">0</span>
-			<button id="moins_varus"type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-			</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-4">
-    <div class="thumbnail">
-      <div id= "pente_tibiale">    	
-       </div> 
-      <div class="caption">
-        <h3>Pente tibiale</h3>
-        <p><button id="plus_penteTibiale" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-        	      <span id="valeur_penteTibiale" class="badge">0</span>
-			<button id="moins_penteTibiale" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-			</button></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-lg-4">
-    <div class="thumbnail">
-      <div id= "embase">    	
-       </div> 
-      <div class="caption">
-        <h3>Embase</h3>
-        <p><button id="plus_embase" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-        	       <span id="valeur_embase" class="badge">4</span>
-			<button  id="moins_embase" type="button" class="btn btn-primary btn-lg">
-  				<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-			</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-
- <nav>
-  <ul class="pager">
-    <li><a href="#">Précédent</a></li>
-    <li id="next"><a href="index2.html">Suivant</a></li>
-  </ul>
-</nav>
-
-   
-
- 
-<script type="text/javascript" src="build/three.min.js"></script>
-<script type="text/javascript" src= "examples/js/loaders/OBJLoader.js"></script>
-<script type="text/javascript" src= "examples/js/libs/dat.gui.min.js"></script>
-<script type="text/javascript" src= "examples/js/controls/OrbitControls.js"></script>
-<script type="text/javascript" src= "index.js"></script>
-<script type="text/javascript" src= "examples/js/exporters/STLBinaryExporter.js"></script>
-<script type="text/javascript" src= "examples/js/exporters/OBJExporter.js"></script>
-<script type="text/javascript" src= "class/tibia.js"></script>
-<script type="text/javascript" src= "class/utils.js"></script>
-<script type="text/javascript" src= "class/embase.js"></script>
-
-
-
-
-    </div>
- 
-
-	
+<body>
 </body>
+     <script type="text/javascript" src="examples/js/controls/OrbitControls.js"></script>
 </html>
